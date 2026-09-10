@@ -1,0 +1,2536 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WoodCraft | Custom Woodworking & Furniture in Karachi</title>
+    <meta name="description" content="WoodCraft offers custom woodworking and furniture solutions in Karachi, Pakistan, including custom furniture, tables, cabinets, wardrobes and more.">
+    <link rel="canonical" href="https://www.woodcraft.pk/">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="WoodCraft | Custom Woodworking & Furniture in Karachi">
+    <meta property="og:description" content="Custom woodworking and furniture solutions designed with attention to detail, practical functionality and timeless style in Karachi.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.woodcraft.pk/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80">
+    <meta name="theme-color" content="#1e1b18">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23d97706'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <style>
+        :root {
+            --bg-primary: #12100e;
+            --bg-secondary: #1a1714;
+            --bg-card: #221e1a;
+            --bg-card-hover: #292420;
+            --border-color: rgba(217, 119, 6, 0.15);
+            --border-hover: rgba(217, 119, 6, 0.4);
+            
+            --text-main: #f5f2eb;
+            --text-muted: #b0a89f;
+            --text-light: #797169;
+            
+            --accent: #d97706;
+            --accent-hover: #f59e0b;
+            --accent-light: rgba(217, 119, 6, 0.1);
+            
+            --wood-dark: #2c1d11;
+            --wood-warm: #5c3a21;
+            
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 7rem 0;
+            position: relative;
+        }
+
+        /* Section Header */
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem auto;
+        }
+
+        .section-tag {
+            display: inline-block;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2.2rem, 3.5vw, 3rem);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 0.9rem 2rem;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid transparent;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: #ffffff;
+            border-color: var(--accent);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            border-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(217, 119, 6, 0.3);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--text-main);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background-color: var(--accent-light);
+            transform: translateY(-2px);
+        }
+
+        /* 1. STICKY NAVBAR */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(18, 16, 14, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .navbar.scrolled {
+            background-color: rgba(18, 16, 14, 0.98);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            padding: 0.8rem 0;
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 90px;
+            transition: var(--transition);
+        }
+
+        .navbar.scrolled .container {
+            height: 75px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.7rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        .nav-link {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            width: 30px;
+            height: 24px;
+            position: relative;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            display: block;
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background: var(--text-main);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        .hamburger span:nth-child(1) { top: 0; }
+        .hamburger span:nth-child(2) { top: 11px; }
+        .hamburger span:nth-child(3) { top: 22px; }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg);
+            top: 11px;
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 11px;
+        }
+
+        /* 2. HERO SECTION */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 120px;
+            background: linear-gradient(to right, rgba(18, 16, 14, 0.92), rgba(18, 16, 14, 0.7)), url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=2000&q=85') no-repeat center center/cover;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 1rem;
+            background: var(--accent-light);
+            border: 1px solid var(--border-color);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2.8rem, 5vw, 4.5rem);
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-visual {
+            position: relative;
+        }
+
+        .hero-card-img {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-card);
+            position: relative;
+        }
+
+        .hero-card-img img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .hero-card-img:hover img {
+            transform: scale(1.03);
+        }
+
+        .floating-element {
+            position: absolute;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow-card);
+            backdrop-filter: blur(8px);
+            z-index: 2;
+        }
+
+        .floating-element.top-left {
+            top: -20px;
+            left: -30px;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .floating-element.bottom-right {
+            bottom: -20px;
+            right: -30px;
+            animation: float 5s ease-in-out infinite 1s;
+        }
+
+        .floating-element h4 {
+            font-size: 0.95rem;
+            margin-bottom: 0.2rem;
+            color: var(--text-main);
+        }
+
+        .floating-element p {
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin: 0;
+            font-weight: 600;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* 3. ABOUT WOODCRAFT */
+        .about {
+            background-color: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: clamp(2rem, 3vw, 2.8rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .about-text p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 1.8rem;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-card);
+        }
+
+        .feature-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+
+        .feature-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-card);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 550px;
+            object-fit: cover;
+        }
+
+        /* 4. SERVICES SECTION */
+        .services-filter {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 0.6rem 1.4rem;
+            border-radius: 30px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 500;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-card);
+        }
+
+        .service-img {
+            height: 240px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .service-card:hover .service-img img {
+            transform: scale(1.05);
+        }
+
+        .service-content {
+            padding: 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .service-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .service-content p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-link {
+            font-weight: 600;
+            color: var(--accent);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .service-link:hover {
+            color: var(--accent-hover);
+            gap: 0.8rem;
+        }
+
+        /* 5. INTERACTIVE PROJECT TYPE SELECTOR */
+        .project-selector-section {
+            background-color: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .selector-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: var(--shadow-card);
+        }
+
+        .selector-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .tab-btn:hover, .tab-btn.active {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+
+        .tab-content {
+            text-align: center;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tab-pane {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tab-pane.active {
+            display: block;
+        }
+
+        .tab-pane h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .tab-pane p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 6. CRAFTSMANSHIP PROCESS */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            position: relative;
+        }
+
+        .process-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .process-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-card);
+        }
+
+        .process-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .process-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .process-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* 8. GALLERY */
+        .gallery-filter {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 300px;
+            cursor: pointer;
+            border: 1px solid var(--border-color);
+            background: var(--bg-card);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(18, 16, 14, 0.9), rgba(18, 16, 14, 0.2));
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+            color: var(--text-main);
+            transform: translateY(10px);
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-overlay p {
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transform: translateY(10px);
+            transition: transform 0.4s ease 0.1s;
+        }
+
+        .gallery-item:hover .gallery-overlay h3,
+        .gallery-item:hover .gallery-overlay p {
+            transform: translateY(0);
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(12, 10, 8, 0.95);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+
+        .lightbox.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 900px;
+            width: 90%;
+            max-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .lightbox-img-container {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            max-height: 70vh;
+        }
+
+        .lightbox-img-container img {
+            max-height: 70vh;
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        .lightbox-caption {
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+
+        .lightbox-caption h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .lightbox-caption p {
+            color: var(--accent);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+        }
+
+        .lightbox-close, .lightbox-prev, .lightbox-next {
+            position: absolute;
+            background: rgba(34, 30, 26, 0.8);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 2010;
+        }
+
+        .lightbox-close {
+            top: -60px;
+            right: 0;
+        }
+
+        .lightbox-prev {
+            top: 50%;
+            left: -70px;
+            transform: translateY(-50%);
+        }
+
+        .lightbox-next {
+            top: 50%;
+            right: -70px;
+            transform: translateY(-50%);
+        }
+
+        .lightbox-close:hover, .lightbox-prev:hover, .lightbox-next:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+
+        /* 9. WOODCRAFT SHOWCASE */
+        .showcase-section {
+            background-color: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .showcase-builder {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: var(--shadow-card);
+        }
+
+        .builder-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .builder-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            color: var(--text-main);
+            font-size: 0.95rem;
+        }
+
+        .builder-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+        }
+
+        .builder-btn {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 0.8rem 1rem;
+            border-radius: 8px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 500;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .builder-btn:hover, .builder-btn.active {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+
+        .builder-result {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            padding: 2.5rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .builder-result h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            color: var(--accent);
+        }
+
+        .builder-result p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        /* 10. DESIGN INSPIRATION SECTION */
+        .inspiration-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .inspiration-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .inspiration-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-card);
+        }
+
+        .inspiration-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .inspiration-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .inspiration-card:hover .inspiration-img img {
+            transform: scale(1.05);
+        }
+
+        .inspiration-content {
+            padding: 1.8rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .inspiration-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .inspiration-content p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* 11. FAQ SECTION */
+        .faq-section {
+            background-color: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-item:hover {
+            border-color: var(--border-hover);
+        }
+
+        .faq-question {
+            padding: 1.5rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+
+        .faq-question span {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--accent);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question span {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0 2rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 0 2rem 1.5rem 2rem;
+        }
+
+        /* 12. CONTACT SECTION */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            align-items: flex-start;
+        }
+
+        .contact-info-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-card);
+        }
+
+        .contact-info-card h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info-card > p {
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+        }
+
+        .contact-details-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            background: var(--accent-light);
+            border: 1px solid var(--border-color);
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            flex-shrink: 0;
+            font-size: 1.2rem;
+        }
+
+        .contact-text h4 {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.2rem;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .contact-text p, .contact-text a {
+            font-size: 1.1rem;
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        .contact-text a:hover {
+            color: var(--accent);
+        }
+
+        .contact-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        /* 13. CONTACT / PROJECT FORM */
+        .contact-form-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-card);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        input, select, textarea {
+            width: 100%;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            padding: 0.9rem 1.2rem;
+            border-radius: 8px;
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px var(--accent-light);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-error {
+            color: #ef4444;
+            font-size: 0.8rem;
+            margin-top: 0.3rem;
+            display: none;
+        }
+
+        .form-group.error input,
+        .form-group.error select,
+        .form-group.error textarea {
+            border-color: #ef4444;
+        }
+
+        .form-group.error .form-error {
+            display: block;
+        }
+
+        /* 14. WHY CHOOSE WOODCRAFT */
+        .why-section {
+            background-color: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .why-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            transition: var(--transition);
+        }
+
+        .why-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-card);
+        }
+
+        .why-icon {
+            background: var(--accent-light);
+            border: 1px solid var(--border-color);
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .why-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .why-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* 15. FOOTER */
+        .footer {
+            background-color: var(--bg-primary);
+            padding-top: 6rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-cta {
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-card));
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 5rem;
+            box-shadow: var(--shadow-card);
+        }
+
+        .footer-cta-text h2 {
+            font-size: clamp(2rem, 3vw, 2.5rem);
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-cta-text p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin: 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.2fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-col h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+        }
+
+        .footer-col p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            padding: 2rem 0;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--accent);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            opacity: 0;
+            pointer-events: none;
+            z-index: 999;
+            box-shadow: var(--shadow-card);
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .back-to-top:hover {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        /* 17. RESPONSIVE DESIGN */
+        @media (max-width: 1200px) {
+            .process-grid, .why-grid, .inspiration-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 3rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero-grid, .about-grid, .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .hero-visual {
+                order: -1;
+            }
+            .about-image img {
+                height: 400px;
+            }
+            .footer-cta {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+                padding: 3rem 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                max-width: 350px;
+                height: 100vh;
+                background: var(--bg-secondary);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                transition: 0.4s ease;
+                border-left: 1px solid var(--border-color);
+                box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+                z-index: 1000;
+            }
+            .nav-menu.active {
+                right: 0;
+            }
+            .process-grid, .why-grid, .inspiration-grid, .services-grid {
+                grid-template-columns: 1fr;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            .builder-grid {
+                grid-template-columns: 1fr;
+            }
+            .selector-container, .showcase-builder, .contact-info-card, .contact-form-card {
+                padding: 2rem 1.5rem;
+            }
+            .lightbox-prev {
+                left: 10px;
+            }
+            .lightbox-next {
+                right: 10px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            section {
+                padding: 5rem 0;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            .hero-buttons .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. STICKY NAVBAR -->
+    <header class="navbar" id="navbar">
+        <div class="container">
+            <a href="#home" class="logo">WOOD<span>CRAFT</span> 🪵</a>
+            
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#craftsmanship" class="nav-link">Craftsmanship</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="https://wa.me/9239247823941" target="_blank" class="btn btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.85rem; display: none; @media(min-width: 992px){display:inline-flex;}">WhatsApp Us</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle Navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span>🪵</span> Custom Woodworking • Karachi
+                    </div>
+                    <h1>Crafted in Wood. Designed for Life.</h1>
+                    <p>Custom woodworking and furniture solutions designed with attention to detail, practical functionality and timeless style.</p>
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/9239247823941" target="_blank" class="btn btn-primary">Start a Project</a>
+                        <a href="#services" class="btn btn-outline">Explore Our Work</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-card-img">
+                        <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=1000&q=80" alt="Custom wooden furniture craftsmanship">
+                    </div>
+                    <div class="floating-element top-left">
+                        <h4>Karachi Workshop</h4>
+                        <p>Master Craftsmanship</p>
+                    </div>
+                    <div class="floating-element bottom-right">
+                        <h4>Tailored Build</h4>
+                        <p>Built to Your Space</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. ABOUT WOODCRAFT -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <span class="section-tag">About WoodCraft</span>
+                    <h2>Where Craftsmanship Meets Modern Design</h2>
+                    <p>WoodCraft is a dedicated woodworking and furniture-focused business proudly serving customers throughout Karachi, Pakistan. We specialize in transforming raw timber and premium materials into functional, elegant masterpieces tailored specifically to your residential or commercial space.</p>
+                    <p>Whether you require bespoke freestanding furniture, seamless built-in storage, or complete room woodwork setups, our focus remains firmly on durability, aesthetic harmony, and personalized solutions.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-card">
+                            <h3>CUSTOM DESIGN</h3>
+                            <p>Furniture concepts created entirely around your precise spatial requirements and aesthetic preferences.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>QUALITY CRAFTSMANSHIP</h3>
+                            <p>Careful attention paid to structural integrity, joinery details, and refined surface finishing.</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>FUNCTIONAL STYLE</h3>
+                            <p>Thoughtfully engineered furniture designed to look striking while serving a practical purpose every single day.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?auto=format&fit=crop&w=1000&q=80" alt="Carpenter woodworker crafting furniture">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SERVICES SECTION -->
+    <section id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Offerings</span>
+                <h2>What We Craft</h2>
+                <p>Explore our core woodworking and bespoke furniture services designed for modern and traditional spaces.</p>
+            </div>
+
+            <div class="services-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="furniture">Furniture</button>
+                <button class="filter-btn" data-filter="home">Home</button>
+                <button class="filter-btn" data-filter="office">Office</button>
+                <button class="filter-btn" data-filter="custom">Custom</button>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card" data-category="furniture custom">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=800&q=80" alt="Custom wooden furniture">
+                    </div>
+                    <div class="service-content">
+                        <div>
+                            <h3>Custom Furniture</h3>
+                            <p>Tailored wooden furniture designed according to your exact room dimensions and personal requirements.</p>
+                        </div>
+                        <a href="#contact" class="service-link">Discuss Requirement &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="service-card" data-category="furniture home">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?auto=format&fit=crop&w=800&q=80" alt="Wooden dining tables">
+                    </div>
+                    <div class="service-content">
+                        <div>
+                            <h3>Dining Tables</h3>
+                            <p>Elegant wooden dining solutions crafted for modern apartments and traditional family homes.</p>
+                        </div>
+                        <a href="#contact" class="service-link">Discuss Requirement &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="service-card" data-category="home storage">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=800&q=80" alt="Wardrobes and cabinets">
+                    </div>
+                    <div class="service-content">
+                        <div>
+                            <h3>Wardrobes & Cabinets</h3>
+                            <p>Practical storage furniture featuring clean architectural lines and organized internal layouts.</p>
+                        </div>
+                        <a href="#contact" class="service-link">Discuss Requirement &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="service-card" data-category="furniture home">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1593062096033-9a26b09da705?auto=format&fit=crop&w=800&q=80" alt="Wooden TV units">
+                    </div>
+                    <div class="service-content">
+                        <div>
+                            <h3>TV Units</h3>
+                            <p>Modern wooden entertainment units designed specifically for contemporary living spaces.</p>
+                        </div>
+                        <a href="#contact" class="service-link">Discuss Requirement &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="service-card" data-category="office furniture">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80" alt="Office furniture woodwork">
+                    </div>
+                    <div class="service-content">
+                        <div>
+                            <h3>Office Furniture</h3>
+                            <p>Functional executive desks, meeting workstations, and storage concepts built for professional environments.</p>
+                        </div>
+                        <a href="#contact" class="service-link">Discuss Requirement &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="service-card" data-category="custom">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1581428982868-e410dd047a90?auto=format&fit=crop&w=800&q=80" alt="Special custom woodwork">
+                    </div>
+                    <div class="service-content">
+                        <div>
+                            <h3>Custom Woodwork</h3>
+                            <p>Special architectural woodworking and unique creative projects executed strictly based on individual concepts.</p>
+                        </div>
+                        <a href="#contact" class="service-link">Discuss Requirement &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. INTERACTIVE PROJECT TYPE SELECTOR -->
+    <section class="project-selector-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Interactive Planner</span>
+                <h2>What Are You Looking to Create?</h2>
+                <p>Select your category below to explore our approach tailored for your specific project.</p>
+            </div>
+
+            <div class="selector-container">
+                <div class="selector-tabs">
+                    <button class="tab-btn active" data-tab="home-furn">Home Furniture</button>
+                    <button class="tab-btn" data-tab="office-furn">Office Furniture</button>
+                    <button class="tab-btn" data-tab="storage">Storage</button>
+                    <button class="tab-btn" data-tab="custom-proj">Custom Project</button>
+                </div>
+
+                <div class="tab-content">
+                    <div class="tab-pane active" id="home-furn">
+                        <h3>Home Furniture</h3>
+                        <p>Explore furniture ideas designed to bring warmth, elegance, and natural character into your living spaces.</p>
+                        <a href="https://wa.me/9239247823941?text=Hello%20WoodCraft,%20I%20would%20like%20to%20discuss%20a%20Home%20Furniture%20project." target="_blank" class="btn btn-primary">Discuss My Project</a>
+                    </div>
+                    <div class="tab-pane" id="office-furn">
+                        <h3>Office Furniture</h3>
+                        <p>Functional wooden furniture concepts designed for productive workspaces, executive suites, and collaborative environments.</p>
+                        <a href="https://wa.me/9239247823941?text=Hello%20WoodCraft,%20I%20would%20like%20to%20discuss%20an%20Office%20Furniture%20project." target="_blank" class="btn btn-primary">Discuss My Project</a>
+                    </div>
+                    <div class="tab-pane" id="storage">
+                        <h3>Storage Solutions</h3>
+                        <p>Smart cabinet, shelving, and wardrobe concepts that help maximize capacity and organize your space seamlessly.</p>
+                        <a href="https://wa.me/9239247823941?text=Hello%20WoodCraft,%20I%20would%20like%20to%20discuss%20a%20Storage%20project." target="_blank" class="btn btn-primary">Discuss My Project</a>
+                    </div>
+                    <div class="tab-pane" id="custom-proj">
+                        <h3>Custom Projects</h3>
+                        <p>Have something specific in mind? Share your dimensional requirements and conceptual ideas to discuss your project directly through WhatsApp.</p>
+                        <a href="https://wa.me/9239247823941?text=Hello%20WoodCraft,%20I%20would%20like%20to%20discuss%20a%20Custom%20Woodworking%20project." target="_blank" class="btn btn-primary">Discuss My Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. CRAFTSMANSHIP PROCESS -->
+    <section id="craftsmanship">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Workflow</span>
+                <h2>Craftsmanship Process</h2>
+                <p>A transparent, structured approach from initial idea to final wooden installation.</p>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-number">01</div>
+                    <h3>Understand</h3>
+                    <p>Discuss your exact requirements, spatial dimensions, and preferred design style with our team.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">02</div>
+                    <h3>Plan</h3>
+                    <p>Develop a suitable furniture or architectural woodworking concept aligned with your functional goals.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">03</div>
+                    <h3>Craft</h3>
+                    <p>Transform the approved concept into a carefully constructed wooden piece using precise joinery techniques.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">04</div>
+                    <h3>Finish</h3>
+                    <p>Complete the piece with meticulous attention to surface appearance, tactile feel, and protective finishing details.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. GALLERY -->
+    <section id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Visual Portfolio</span>
+                <h2>Craftsmanship Gallery</h2>
+                <p>Browse through examples of our custom furniture and woodworking projects.</p>
+            </div>
+
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-gallery="all">All</button>
+                <button class="filter-btn" data-gallery="furniture">Furniture</button>
+                <button class="filter-btn" data-gallery="tables">Tables</button>
+                <button class="filter-btn" data-gallery="storage">Storage</button>
+                <button class="filter-btn" data-gallery="interiors">Interiors</button>
+                <button class="filter-btn" data-gallery="craftsmanship">Craftsmanship</button>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="furniture interiors" data-title="Modern Wooden Living Interior" data-category-name="Interiors">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Modern wooden living interior">
+                    <div class="gallery-overlay">
+                        <h3>Modern Wooden Living Interior</h3>
+                        <p>Interiors</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="tables furniture" data-title="Custom Solid Wood Dining Table" data-category-name="Tables">
+                    <img src="https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?auto=format&fit=crop&w=800&q=80" alt="Custom solid wood dining table">
+                    <div class="gallery-overlay">
+                        <h3>Custom Solid Wood Dining Table</h3>
+                        <p>Tables</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="storage" data-title="Bespoke Wardrobe & Cabinetry" data-category-name="Storage">
+                    <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=800&q=80" alt="Bespoke wardrobe and cabinetry">
+                    <div class="gallery-overlay">
+                        <h3>Bespoke Wardrobe & Cabinetry</h3>
+                        <p>Storage</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="craftsmanship" data-title="Woodworker Carpentry Detail" data-category-name="Craftsmanship">
+                    <img src="https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?auto=format&fit=crop&w=800&q=80" alt="Woodworker carpentry detail">
+                    <div class="gallery-overlay">
+                        <h3>Woodworker Carpentry Detail</h3>
+                        <p>Craftsmanship</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="furniture" data-title="Contemporary Wooden TV Console" data-category-name="Furniture">
+                    <img src="https://images.unsplash.com/photo-1593062096033-9a26b09da705?auto=format&fit=crop&w=800&q=80" alt="Contemporary wooden TV console">
+                    <div class="gallery-overlay">
+                        <h3>Contemporary Wooden TV Console</h3>
+                        <p>Furniture</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="interiors office" data-title="Executive Wooden Workspace" data-category-name="Interiors">
+                    <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80" alt="Executive wooden workspace">
+                    <div class="gallery-overlay">
+                        <h3>Executive Wooden Workspace</h3>
+                        <p>Interiors</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="tables" data-title="Minimalist Coffee Table" data-category-name="Tables">
+                    <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=800&q=80" alt="Minimalist coffee table">
+                    <div class="gallery-overlay">
+                        <h3>Minimalist Coffee Table</h3>
+                        <p>Tables</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="craftsmanship" data-title="Precision Joinery & Timber Work" data-category-name="Craftsmanship">
+                    <img src="https://images.unsplash.com/photo-1581428982868-e410dd047a90?auto=format&fit=crop&w=800&q=80" alt="Precision joinery and timber work">
+                    <div class="gallery-overlay">
+                        <h3>Precision Joinery & Timber Work</h3>
+                        <p>Craftsmanship</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">&times;</button>
+        <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous image">&#10094;</button>
+        <button class="lightbox-next" id="lightbox-next" aria-label="Next image">&#10095;</button>
+        <div class="lightbox-content">
+            <div class="lightbox-img-container">
+                <img id="lightbox-img" src="" alt="">
+            </div>
+            <div class="lightbox-caption">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-category"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 9. WOODCRAFT SHOWCASE -->
+    <section class="showcase-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Interactive Concept Builder</span>
+                <h2>Build Your Style</h2>
+                <p>Select your preferred design style and furniture type to explore our aesthetic direction.</p>
+            </div>
+
+            <div class="showcase-builder">
+                <div class="builder-grid">
+                    <div class="builder-group">
+                        <label>Select Style</label>
+                        <div class="builder-options" id="style-options">
+                            <button class="builder-btn active" data-style="Modern">Modern</button>
+                            <button class="builder-btn" data-style="Classic">Classic</button>
+                            <button class="builder-btn" data-style="Minimal">Minimal</button>
+                            <button class="builder-btn" data-style="Rustic">Rustic</button>
+                        </div>
+                    </div>
+
+                    <div class="builder-group">
+                        <label>Select Furniture</label>
+                        <div class="builder-options" id="furniture-options">
+                            <button class="builder-btn active" data-furniture="Table">Table</button>
+                            <button class="builder-btn" data-furniture="Wardrobe">Wardrobe</button>
+                            <button class="builder-btn" data-furniture="Cabinet">Cabinet</button>
+                            <button class="builder-btn" data-furniture="TV Unit">TV Unit</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="builder-result">
+                    <h3 id="builder-title">Modern Table</h3>
+                    <p id="builder-desc">Clean lines and contemporary proportions for a refined dining or living space.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. DESIGN INSPIRATION SECTION -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Spaces We Enhance</span>
+                <h2>Design Inspiration</h2>
+                <p>Discover how custom wooden furniture complements different zones within your property.</p>
+            </div>
+
+            <div class="inspiration-grid">
+                <div class="inspiration-card">
+                    <div class="inspiration-img">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Living Room wooden furniture">
+                    </div>
+                    <div class="inspiration-content">
+                        <div>
+                            <h3>Living Room</h3>
+                            <p>Custom entertainment units, coffee tables, and accent shelving that create a warm, welcoming gathering space.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inspiration-card">
+                    <div class="inspiration-img">
+                        <img src="https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?auto=format&fit=crop&w=800&q=80" alt="Dining Space wooden furniture">
+                    </div>
+                    <div class="inspiration-content">
+                        <div>
+                            <h3>Dining Space</h3>
+                            <p>Sturdy, elegant dining tables and custom credenzas built to host family meals and memorable gatherings.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inspiration-card">
+                    <div class="inspiration-img">
+                        <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=800&q=80" alt="Bedroom custom woodwork">
+                    </div>
+                    <div class="inspiration-content">
+                        <div>
+                            <h3>Bedroom</h3>
+                            <p>Fitted wardrobes, bedside tables, and bespoke storage solutions designed for calm, organized personal retreats.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inspiration-card">
+                    <div class="inspiration-img">
+                        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80" alt="Workspace custom woodwork">
+                    </div>
+                    <div class="inspiration-content">
+                        <div>
+                            <h3>Workspace</h3>
+                            <p>Executive desks, functional storage cabinets, and custom workstations built for professional productivity.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. FAQ SECTION -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Got Questions?</span>
+                <h2>Frequently Asked Questions</h2>
+                <p>Clear answers regarding our custom woodworking services and consultation process.</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What type of furniture does WoodCraft create?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        We create a wide variety of custom wooden furniture including dining tables, wardrobes, storage cabinets, TV units, office desks, and bespoke architectural woodwork solutions.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I request custom furniture?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! Custom furniture is our primary focus. We design and build pieces tailored specifically to your dimensions, space layout, and aesthetic preferences.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How can I discuss my requirements?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        You can easily discuss your project by getting in touch with us directly via phone or through WhatsApp at +92 392 47823941, or by submitting our online project inquiry form.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Where is WoodCraft located?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        WoodCraft is based and operates in Karachi, Pakistan, serving clients across the city.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I contact WoodCraft through WhatsApp?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, you can reach us instantly on WhatsApp at +92 392 47823941 for quick project discussions, queries, and sharing reference ideas.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do you work on custom woodworking projects?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, we regularly take on specialized and custom woodworking projects based on individual client requirements and architectural concepts.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. CONTACT SECTION -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get in Touch</span>
+                <h2>Start Your Woodworking Project</h2>
+                <p>Reach out to discuss your requirements, space, and ideas with our team in Karachi.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info-card">
+                    <h3>WOODCRAFT</h3>
+                    <p>Custom woodworking and furniture solutions designed for homes, offices, and spaces in Karachi.</p>
+                    
+                    <div class="contact-details-list">
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>Karachi, Pakistan</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <a href="tel:+9239247823941">0392 47823941</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">💬</div>
+                            <div class="contact-text">
+                                <h4>WhatsApp</h4>
+                                <a href="https://wa.me/9239247823941" target="_blank">+92 392 47823941</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-actions">
+                        <a href="tel:+9239247823941" class="btn btn-outline" style="flex: 1;">Call Now</a>
+                        <a href="https://wa.me/9239247823941" target="_blank" class="btn btn-primary" style="flex: 1;">Chat on WhatsApp</a>
+                    </div>
+                </div>
+
+                <!-- 13. CONTACT / PROJECT FORM -->
+                <div class="contact-form-card">
+                    <h3 style="margin-bottom: 1.5rem; font-size: 1.8rem;">Project Inquiry Form</h3>
+                    <form id="project-form">
+                        <div class="form-row">
+                            <div class="form-group" id="group-name">
+                                <label for="form-name">Your Name</label>
+                                <input type="text" id="form-name" placeholder="Enter your name">
+                                <div class="form-error">Please enter your name.</div>
+                            </div>
+                            <div class="form-group" id="group-phone">
+                                <label for="form-phone">Phone Number</label>
+                                <input type="text" id="form-phone" placeholder="Enter your phone">
+                                <div class="form-error">Please enter your phone number.</div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="form-type">Project Type</label>
+                                <select id="form-type">
+                                    <option value="Custom Furniture">Custom Furniture</option>
+                                    <option value="Dining Table">Dining Table</option>
+                                    <option value="Wardrobe">Wardrobe</option>
+                                    <option value="Cabinet">Cabinet</option>
+                                    <option value="TV Unit">TV Unit</option>
+                                    <option value="Office Furniture">Office Furniture</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-style">Preferred Style</label>
+                                <select id="form-style">
+                                    <option value="Modern">Modern</option>
+                                    <option value="Classic">Classic</option>
+                                    <option value="Minimal">Minimal</option>
+                                    <option value="Rustic">Rustic</option>
+                                    <option value="Not Sure">Not Sure</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="group-message">
+                            <label for="form-message">Message / Requirements</label>
+                            <textarea id="form-message" placeholder="Describe your project, dimensions, or specific requirements..."></textarea>
+                            <div class="form-error">Please provide a brief message.</div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send via WhatsApp</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. WHY CHOOSE WOODCRAFT -->
+    <section class="why-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Philosophy</span>
+                <h2>Why Choose WoodCraft</h2>
+                <p>The principles that guide every woodworking and custom furniture project we undertake.</p>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">🛠️</div>
+                    <h3>Custom Approach</h3>
+                    <p>Designed around individual spatial requirements and personal aesthetic tastes.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">📐</div>
+                    <h3>Practical Design</h3>
+                    <p>Furniture should work functionally as well as it looks visually in your space.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">✨</div>
+                    <h3>Attention to Detail</h3>
+                    <p>Uncompromising focus on clean timber construction, joinery, and finishing.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">🤝</div>
+                    <h3>Personal Consultation</h3>
+                    <p>Discuss your ideas and requirements thoroughly before moving forward with production.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 15. FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-cta">
+                <div class="footer-cta-text">
+                    <h2>Have a Furniture Idea?</h2>
+                    <p>Let's turn your requirements into a thoughtful wooden design.</p>
+                </div>
+                <a href="https://wa.me/9239247823941" target="_blank" class="btn btn-primary">Start on WhatsApp</a>
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#home" class="logo" style="margin-bottom: 1rem;">WOOD<span>CRAFT</span> 🪵</a>
+                    <p>Custom woodworking and furniture solutions for homes, offices and spaces in Karachi.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#craftsmanship">Craftsmanship</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Services & Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services">Custom Furniture</a></li>
+                        <li><a href="#services">Dining Tables</a></li>
+                        <li><a href="#services">Wardrobes & Cabinets</a></li>
+                        <li><a href="#services">TV Units</a></li>
+                        <li><a href="#services">Office Furniture</a></li>
+                        <li><a href="#services">Custom Woodwork</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <p>Karachi, Pakistan</p>
+                    <p>Phone: <a href="tel:+9239247823941" style="color: var(--text-main); font-weight: 600;">0392 47823941</a></p>
+                    <p>WhatsApp: <a href="https://wa.me/9239247823941" target="_blank" style="color: var(--accent); font-weight: 600;">+92 392 47823941</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p id="copyright-text">© 2026 WoodCraft. All rights reserved.</p>
+                <p>Karachi, Pakistan</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">&#8593;</button>
+
+    <!-- 16. JAVASCRIPT INTERACTIONS -->
+    <script>
+        // Automatic Copyright Year
+        document.getElementById('copyright-text').textContent = `© ${new Date().getFullYear()} WoodCraft. All rights reserved.`;
+
+        // Sticky Navbar & Back to Top Scroll Effect
+        const navbar = document.getElementById('navbar');
+        const backToTop = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            if (window.scrollY > 400) {
+                backToTop.classList.add('active');
+            } else {
+                backToTop.classList.remove('active');
+            }
+
+            updateActiveNavOnScroll();
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Mobile Hamburger Menu
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Active Navigation Link Highlighting on Scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        function updateActiveNavOnScroll() {
+            let scrollPosition = window.scrollY + 200;
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }
+
+        // Service Category Filtering
+        const filterBtns = document.querySelectorAll('.services-filter .filter-btn');
+        const serviceCards = document.querySelectorAll('.services-grid .service-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                serviceCards.forEach(card => {
+                    const categories = card.getAttribute('data-category');
+                    if (filter === 'all' || categories.includes(filter)) {
+                        card.style.display = 'flex';
+                        card.style.animation = 'fadeIn 0.5s ease';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Interactive Project Type Selector (Tabs)
+        const tabBtns = document.querySelectorAll('.selector-tabs .tab-btn');
+        const tabPanes = document.querySelectorAll('.tab-pane');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const tabId = btn.getAttribute('data-tab');
+                tabPanes.forEach(pane => {
+                    pane.classList.remove('active');
+                    if (pane.getAttribute('id') === tabId) {
+                        pane.classList.add('active');
+                    }
+                });
+            });
+        });
+
+        // Gallery Filtering & Lightbox
+        const galleryBtns = document.querySelectorAll('.gallery-filter .filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-grid .gallery-item');
+
+        galleryBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                galleryBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-gallery');
+
+                galleryItems.forEach(item => {
+                    const categories = item.getAttribute('data-category');
+                    if (filter === 'all' || categories.includes(filter)) {
+                        item.style.display = 'block';
+                        item.style.animation = 'fadeIn 0.5s ease';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Lightbox Implementation
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxTitle = document.getElementById('lightbox-title');
+        const lightboxCategory = document.getElementById('lightbox-category');
+        const lightboxClose = document.getElementById('lightbox-close');
+        const lightboxPrev = document.getElementById('lightbox-prev');
+        const lightboxNext = document.getElementById('lightbox-next');
+
+        let currentIndex = 0;
+        const visibleGalleryItems = () => Array.from(galleryItems).filter(item => item.style.display !== 'none');
+
+        galleryItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                const currentVisible = visibleGalleryItems();
+                currentIndex = currentVisible.indexOf(item);
+                openLightbox(item);
+            });
+        });
+
+        function openLightbox(item) {
+            const img = item.querySelector('img');
+            const title = item.getAttribute('data-title');
+            const category = item.getAttribute('data-category-name');
+
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightboxTitle.textContent = title;
+            lightboxCategory.textContent = category;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        lightboxPrev.addEventListener('click', () => {
+            const currentVisible = visibleGalleryItems();
+            currentIndex = (currentIndex - 1 + currentVisible.length) % currentVisible.length;
+            openLightbox(currentVisible[currentIndex]);
+        });
+
+        lightboxNext.addEventListener('click', () => {
+            const currentVisible = visibleGalleryItems();
+            currentIndex = (currentIndex + 1) % currentVisible.length;
+            openLightbox(currentVisible[currentIndex]);
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') lightboxPrev.click();
+            if (e.key === 'ArrowRight') lightboxNext.click();
+        });
+
+        // WoodCraft Showcase Builder
+        const styleBtns = document.querySelectorAll('#style-options .builder-btn');
+        const furnitureBtns = document.querySelectorAll('#furniture-options .builder-btn');
+        const builderTitle = document.getElementById('builder-title');
+        const builderDesc = document.getElementById('builder-desc');
+
+        let selectedStyle = 'Modern';
+        let selectedFurniture = 'Table';
+
+        const showcaseDescriptions = {
+            'Modern-Table': { title: 'Modern Table', desc: 'Clean lines and contemporary proportions for a refined dining or living space.' },
+            'Modern-Wardrobe': { title: 'Modern Wardrobe', desc: 'Sleek surfaces and smart internal configurations designed for streamlined contemporary bedrooms.' },
+            'Modern-Cabinet': { title: 'Modern Cabinet', desc: 'Minimalist profiles and smooth operating hardware combining visual elegance with everyday utility.' },
+            'Modern-TV Unit': { title: 'Modern TV Unit', desc: 'Sleek architectural lines and integrated cable management built for modern entertainment setups.' },
+
+            'Classic-Table': { title: 'Classic Table', desc: 'Timeless woodworking details and robust proportions inspired by traditional craft heritage.' },
+            'Classic-Wardrobe': { title: 'Classic Wardrobe', desc: 'Traditional paneling and refined aesthetic character that brings lasting warmth to bedrooms.' },
+            'Classic-Cabinet': { title: 'Classic Cabinet', desc: 'Exquisite attention to classic joinery and enduring proportions for sophisticated storage.' },
+            'Classic-TV Unit': { title: 'Classic TV Unit', desc: 'Rich wood tones and traditional detailing that anchor your living room in timeless elegance.' },
+
+            'Minimal-Table': { title: 'Minimal Table', desc: 'Stripped-back geometry emphasizing the natural grain and purity of the wooden material.' },
+            'Minimal-Wardrobe': { title: 'Minimal Wardrobe', desc: 'Uncluttered flat surfaces and seamless integration designed for serene spatial harmony.' },
+            'Minimal-Cabinet': { title: 'Minimal Cabinet', desc: 'Simple forms and practical storage with a clean, unobtrusive appearance.' },
+            'Minimal-TV Unit': { title: 'Minimal TV Unit', desc: 'Low-profile design focused on simplicity, clean lines, and uncluttered presentation.' },
+
+            'Rustic-Table': { title: 'Rustic Table', desc: 'A warmer furniture direction inspired by natural wood character, organic edges, and robust build.' },
+            'Rustic-Wardrobe': { title: 'Rustic Wardrobe', desc: 'Textured timber finishes celebrating the natural authenticity and rugged charm of wood.' },
+            'Rustic-Cabinet': { title: 'Rustic Cabinet', desc: 'Handcrafted character and robust timber presence bringing organic warmth to any interior.' },
+            'Rustic-TV Unit': { title: 'Rustic TV Unit', desc: 'Natural wood grains and tactile finishes creating a cozy, grounded living room centerpiece.' }
+        };
+
+        function updateShowcase() {
+            const key = `${selectedStyle}-${selectedFurniture}`;
+            const data = showcaseDescriptions[key] || { title: `${selectedStyle} ${selectedFurniture}`, desc: 'Custom woodworking crafted according to your personal style and functional requirements.' };
+            builderTitle.textContent = data.title;
+            builderDesc.textContent = data.desc;
+        }
+
+        styleBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                styleBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                selectedStyle = btn.getAttribute('data-style');
+                updateShowcase();
+            });
+        });
+
+        furnitureBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                furnitureBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                selectedFurniture = btn.getAttribute('data-furniture');
+                updateShowcase();
+            });
+        });
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                faqItems.forEach(i => i.classList.remove('active'));
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Contact Form Validation & WhatsApp Generation
+        const projectForm = document.getElementById('project-form');
+        const formName = document.getElementById('form-name');
+        const formPhone = document.getElementById('form-phone');
+        const formType = document.getElementById('form-type');
+        const formStyle = document.getElementById('form-style');
+        const formMessage = document.getElementById('form-message');
+
+        projectForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let isValid = true;
+
+            // Validate Name
+            if (!formName.value.trim()) {
+                document.getElementById('group-name').classList.add('error');
+                isValid = false;
+            } else {
+                document.getElementById('group-name').classList.remove('error');
+            }
+
+            // Validate Phone
+            if (!formPhone.value.trim()) {
+                document.getElementById('group-phone').classList.add('error');
+                isValid = false;
+            } else {
+                document.getElementById('group-phone').classList.remove('error');
+            }
+
+            // Validate Message
+            if (!formMessage.value.trim()) {
+                document.getElementById('group-message').classList.add('error');
+                isValid = false;
+            } else {
+                document.getElementById('group-message').classList.remove('error');
+            }
+
+            if (isValid) {
+                const name = formName.value.trim();
+                const phone = formPhone.value.trim();
+                const projectType = formType.value;
+                const preferredStyle = formStyle.value;
+                const messageText = formMessage.value.trim();
+
+                const whatsappMessage = `Hello WoodCraft, I would like to discuss a woodworking project.\n\nName: ${name}\nPhone: ${phone}\nProject Type: ${projectType}\nPreferred Style: ${preferredStyle}\nMessage: ${messageText}`;
+                
+                const encodedMessage = encodeURIComponent(whatsappMessage);
+                const whatsappUrl = `https://wa.me/9239247823941?text=${encodedMessage}`;
+
+                window.open(whatsappUrl, '_blank');
+            }
+        });
+    </script>
+</body>
+</html>
